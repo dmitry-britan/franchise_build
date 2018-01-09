@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1515487081588">
+    <link rel="stylesheet" href="css/main.css?v=1515510703297">
   </head>
   <body>
     <header class="header">
@@ -24,7 +24,7 @@
           </div>
           <div class="header__action">
             <div class="header__login">
-              <div class="login"><i class="icon icon-login"></i><a class="login__item" href="">Войти</a><a class="login__item" href="">Регистрация</a></div>
+              <div class="login"><i class="icon icon-login"></i><a class="login__item" href="">Войти</a><a class="login__item" href="" data-modal="registration">Регистрация</a></div>
             </div>
             <div class="header__langs">
               <div class="langs">
@@ -34,7 +34,7 @@
             </div>
             <div class="header__contacts">
               <div class="contact-us">
-                <div class="contact-us__phone">(044) 000-00-00</div><a class="contact-us__link" href="">Заказать обратный звонок</a>
+                <div class="contact-us__phone">(044) 000-00-00</div><a class="contact-us__link" href="" data-modal="callback">Заказать обратный звонок</a>
               </div>
             </div>
           </div>
@@ -413,7 +413,65 @@
       </div>
     </footer>
     <!-- /FOOTER-->
-    <script src="js/vendor.js?v=1515487081589"></script>
-    <script src="js/main.js?v=1515487081589"></script>
+    <div style="display: none;">
+      <div class="popup" id="registration">
+        <div class="popup__close arcticmodal-close"></div>
+        <div class="popup__inner">
+          <h4 class="popup__header">Быстрая регистрация</h4>
+          <div class="popup__body">
+            <div class="form">
+              <div class="form__field is--required">
+                <label class="label">Ваше имя</label>
+                <input class="input" type="text">
+              </div>
+              <div class="form__field is--required">
+                <label class="label">Ваш e-mail</label>
+                <input class="input" type="email">
+              </div>
+              <div class="form__field">
+                <label class="label">Ваш телефон</label>
+                <input class="input" type="text">
+              </div>
+              <div class="form__field">
+                <label class="label">Откуда вы?</label>
+                <input class="input" type="text">
+              </div>
+              <div class="form__field">Я — продавец франшизы (франчайзер)<span class="checkbox__wrapper">
+                  <input class="checkbox" type="radio" name="seller" id="yes" checked>
+                  <label for="yes">Да</label></span><span class="checkbox__wrapper">
+                  <input class="checkbox" type="radio" name="seller" id="no">
+                  <label for="no">Нет</label></span></div>
+              <div class="form__field">Регистрируясь на сайте, вы подтверждаете, что ознакомились и приняли <a href="">пользовательское соглашение</a></div>
+              <div class="form__action">
+                <button class="btn btn--primary btn--md" type="submit">Зарегистрироваться</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="callback">
+        <div class="popup__close arcticmodal-close"></div>
+        <div class="popup__inner">
+          <h4 class="popup__header">Заказать звонок</h4>
+          <div class="popup__body">
+            <div class="form">
+              <div class="form__field is--required">
+                <label class="label">Ваше имя</label>
+                <input class="input" type="text">
+              </div>
+              <div class="form__field">
+                <label class="label">Ваш телефон</label>
+                <input class="input" type="text">
+              </div>
+              <div class="form__action">
+                <button class="btn btn--primary btn--md" type="submit">Отправить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.js?v=1515510703298"></script>
+    <script src="js/main.js?v=1515510703298"></script>
   </body>
 </html>
